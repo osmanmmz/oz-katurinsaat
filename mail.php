@@ -5,7 +5,7 @@ if($_POST){
 	$subject = $_POST['subject'];
     $message = $_POST['text'];
 	
-	$to = "cgdstnc@gmail.com";
+	$to = "osmanmmz@hotmail.com";
 	// subject
 	$subject = 'From Cube+';
 	// To send HTML mail, the Content-type header must be set

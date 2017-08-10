@@ -45,13 +45,13 @@
     <div class="container">
       <div class="navbar-header">
         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
-        <a class="navbar-brand" href="index.html#home"><img src="images/ozka.jpg" height="42" width="42" alt=""><img src="images/oz-ka.png" height="42" width="80" alt=""> </a> </div>
+        <a class="navbar-brand" href="index.html#home"><img src="images/ozka.jpg" height="80" width="80" alt=""><img src="images/oz-ka.png" height="80" width="160" alt=""> </a> </div>
       <div class="navbar-collapse collapse">
-        <ul class="nav navbar-nav">
-          <li><a href="index.html#home">Anasayfa</a></li>
-          <li><a href="index.html#about">Hakkımızda</a></li>
-          <li><a href="index.html#portfolio">Projelerimiz</a></li>
-          <li><a href="index.html#contact">İletişim</a></li>
+        <ul  class="option-set clearfix" id="portfolioFilter">
+          <li><a href="index.html#home"><font size="4"><b>Anasayfa</font></a></li>
+          <li><a href="index.html#about"><font size="4"><b>Hakkımızda</font></a></li>
+          <li><a href="index.html#portfolio"><font size="4"><b>Projelerimiz</font></a></li>
+          <li><a href="index.html#contact"><font size="4"><b>İletişim</font></a></li>
         </ul>
       </div>
     </div>
@@ -60,8 +60,8 @@
 
 
 <div id="home">
-
-<div class="w3-content" >
+<p><br /> <br /> </p>
+<div  class="w3-content" >
   <img class="mySlides" src="images/detail/merlindetay1.jpg" style="width:100%">
   <img class="mySlides" src="images/detail/merlindetay2.jpg" style="width:100%">
   <img class="mySlides" src="images/detail/merlindetay3.jpg" style="width:100%">
@@ -108,6 +108,7 @@
             <ul>
               <li><i class="fa fa-map-marker"></i> <span>Mustafa Akyol Sk. No:7 Kurtköy PENDİK / İSTANBUL</span> </li>
               <li> <i class="fa fa-envelope"></i><span> oz-kainsaat@hotmail.com</span></li>
+			  <li> <i class="fa fa-envelope"></i><span> info@oz-katurinsaat.com.tr</span></li>
               <li><i class="fa  fa-phone"></i> <span>0 (222) 220 84 84  </span></li>
             </ul>
           </div>
@@ -136,7 +137,7 @@
 <script type="text/javascript" src="js/jquery.sequence-min.js"></script>
 <script type="text/javascript" src="js/jquery.tubular.1.0.js"></script>  
 <script type="text/javascript" src="js/docs.min.js"></script>
-<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=false"></script> 
+<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?key=AIzaSyDCOcakoUNMU5hqTC0_wKOE3pE6L8ewcv4&callback=initMap"></script> 
 <script type="text/javascript" src="js/gmap3.js"></script> 
 <script type="text/javascript"> 
 var slideIndex = 1;
@@ -166,7 +167,7 @@ function showDivs(n) {
   dots[slideIndex-1].className += " w3-opacity-off";
 }
 </script>
-<script type="text/javascript">
+<!--<script type="text/javascript">
 	$('#test1').gmap3({ 
             map:{
               options:{
@@ -178,6 +179,31 @@ function showDivs(n) {
               values: [
                 [40.929320, 29.307189], // #1 after average
                 [40.929320, 29.307189] // no group
+              ],
+              cluster:{
+                radius:60,         
+            		// This style will be used for clusters with more than 20 markers
+            		0: {
+            		  content: '<div class="cluster cluster-3">CLUSTER_COUNT</div>',
+            			width: 60,
+            			height: 94
+            		}
+            	}
+            }
+          });
+</script>-->
+<script type="text/javascript">
+	$('#test1').gmap3({ 
+            map:{
+              options:{
+                center:[40.928320, 29.306889],
+                zoom: 18
+              }
+            },
+            marker:{
+              values: [
+                [40.928320, 29.306889], // #1 after average
+                [40.928320, 29.306889] // no group
               ],
               cluster:{
                 radius:60,         
